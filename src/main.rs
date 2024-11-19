@@ -81,6 +81,12 @@ fn update_board(board: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
 }
 
 fn main() {
+    println!("Fullscreen for the best experience.\nYou might need to zoom out (usually 'Ctrl + -').");
+    println!("Use 'Ctr + C' to stop the simulation.\nPress ENTER to start the simulation.");
+
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Failed to read line");
+    
     // let mut board: Vec<Vec<i32>> = vec![vec![0; 40]; 24]; // default terminal size
     let mut board: Vec<Vec<i32>> = vec![vec![0; 95]; 50]; // default terminal size fullscreened
 
